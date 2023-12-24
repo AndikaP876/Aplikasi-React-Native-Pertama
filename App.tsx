@@ -1,18 +1,21 @@
-import React from "react";
-import { Image, Text, TextInput, View } from "react-native";
+/* eslint-disable react-native/no-inline-styles */
+import React, {Component} from 'react';
+import {Image, Text, TextInput, View} from 'react-native';
 
 const App = () => {
   return (
     <View>
-      <View style={{width: 80, height: 80, backgroundColor: "#0abde3"}}/>
+      <View style={{width: 80, height: 80, backgroundColor: '#0abde3'}} />
       <Text>Andika</Text>
-      <Prasetya></Prasetya>
+      <Prasetya />
       <Text>Andika</Text>
       <Text>Andika</Text>
-      <Photo/>
-      <TextInput style={{borderWidth: 1}}/>
+      <Photo />
+      <TextInput style={{borderWidth: 1}} />
+      <BoxGreen />
+      <Profile />
     </View>
-  )
+  );
 };
 
 const Prasetya = () => {
@@ -21,11 +24,35 @@ const Prasetya = () => {
 
 const Photo = () => {
   return (
-    <Image 
-      source={{uri: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ahmad_Yani.jpg"}}
+    <Image
+      source={{
+        uri: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Ahmad_Yani.jpg',
+      }}
       style={{width: 100, height: 100}}
     />
-  )
+  );
 };
+
+class BoxGreen extends Component {
+  render() {
+    return <Text>Ini component dari class</Text>;
+  }
+}
+
+class Profile extends Component {
+  render(): React.ReactNode {
+    return (
+      <View>
+        <Image
+          source={{
+            uri: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Joko_Widodo_2019_official_portrait.jpg',
+          }}
+          style={{width: 100, height: 100}}
+        />
+        <Text style={{color: 'blue', fontSize: 24}}>Ini hewan</Text>
+      </View>
+    );
+  }
+}
 
 export default App;
