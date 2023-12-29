@@ -1,29 +1,16 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "andika",
+      "email": "andika@gmail.com",
+      "bidang": "mobile dev"
     },
     {
-      "title": "kabayang coding",
-      "author": "andika",
+      "name": "prasetya",
+      "email": "prassetya@gmail.com",
+      "bidang": "react native dev",
       "id": 2
-    },
-    {
-      "title": "react native",
-      "author": "andika",
-      "id": 3
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
